@@ -32,4 +32,4 @@
 
 ## happy list todos
 * list_todos
-  - utter_placeholder_todos
+  - action_todo_list

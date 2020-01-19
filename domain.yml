@@ -15,7 +15,7 @@ actions:
 - utter_happy
 - utter_goodbye
 - utter_iamabot
-- utter_placeholder_todos
+- action_todo_list
 
 templates:
   utter_greet:
@@ -36,9 +36,6 @@ templates:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
-  utter_placeholder_todos:
-  - text: "placeholder for todos!"
 
 session_config:
   session_expiration_time: 60
