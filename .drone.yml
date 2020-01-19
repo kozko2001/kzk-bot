@@ -12,8 +12,11 @@ steps:
     SLACK_KEY:
       from_secret: SLACK_KEY
   commands:
-  - docker ps -a
-  - docker build . --build-arg SLACK_KEY=$SLACK_KEY --tag bot --force-rm --no-cache
+  - docker system prune -f
+  - docker rm -f bot || true
+  - docker rmi -f bot
+  - docker build . --build-arg SLACK_KEY --tag bot --force-rm
+  - docker run -d --restart always -e VIRTUAL_HOST=bot.allocsoc.net -e LETSENCRYPT_HOST=bot.allocsoc.net -e LETSENCRYPT_EMAIL=kozko2001@gmail.com bot
 
 volumes:
 - name: dockersock
