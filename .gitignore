@@ -10,3 +10,4 @@ htmlcov
 venv/
 models/
 __pycache__/
+credentials.yml
