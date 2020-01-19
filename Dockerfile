@@ -12,4 +12,4 @@ RUN cat credentials.yml
 
 RUN rasa train
 
-CMD ["rasa", "run", "--port", "5002", "--connector", "slack", "--cors", "*", "--debug", "--enable-api"]
+CMD ['./deploy/deploy.sh']

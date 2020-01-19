@@ -2,7 +2,18 @@ kind: pipeline
 name: default
 
 steps:
-- name: build image
+- name: clean
+  image: docker:dind
+  privileged: true
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - docker system prune -f
+  - docker rm -f bot || true
+  - docker rmi -f bot
+
+- name: bbuild
   image: docker:dind
   privileged: true
   volumes:
@@ -12,10 +23,22 @@ steps:
     SLACK_KEY:
       from_secret: SLACK_KEY
   commands:
-  - docker system prune -f
-  - docker rm -f bot || true
-  - docker rmi -f bot
   - docker build . --build-arg SLACK_KEY --tag bot --force-rm
+- name: actions
+  image: docker:dind
+  privileged: true
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - docker run -d --network=nginx-bridge --name bot_actions --restart always bot rasa run actions
+- name: deploy
+  image: docker:dind
+  privileged: true
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
   - docker run -d --network=nginx-bridge --name bot --restart always -e VIRTUAL_HOST=bot.allocsoc.net -e LETSENCRYPT_HOST=bot.allocsoc.net -e LETSENCRYPT_EMAIL=kozko2001@gmail.com bot
 
 volumes:
