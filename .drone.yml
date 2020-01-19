@@ -13,7 +13,7 @@ steps:
       from_secret: SLACK_KEY
   commands:
   - docker ps -a
-  - docker build . --tag bot --force-rm --no-cache
+  - docker build . --build-arg SLACK_KEY=$SLACK_KEY --tag bot --force-rm --no-cache
 
 volumes:
 - name: dockersock
