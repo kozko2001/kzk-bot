@@ -54,3 +54,11 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+
+## intent:list_todos
+- what I have pending to do?
+- what I should focus today?
+- can you give my list of todos?
+- what is pending from my org files?
+
