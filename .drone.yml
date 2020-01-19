@@ -4,11 +4,18 @@ name: default
 steps:
 - name: build image
   image: docker:dind
+  privileged: true
   volumes:
   - name: dockersock
-    path: /var/run
+    path: /var/run/docker.sock
   environment:
     SLACK_KEY:
       from_secret: SLACK_KEY
   commands:
-  - ./build.sh
+  - docker ps -a
+  - docker build . --tag bot --force-rm --no-cache
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
