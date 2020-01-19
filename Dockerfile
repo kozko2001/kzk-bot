@@ -11,4 +11,4 @@ RUN sed -i "s/SLACK_KEY/$SLACK_KEY/g" credentials.yml
 
 RUN rasa train
 
-CMD ['./deploy/deploy.sh']
+CMD ['deploy/deploy.sh']
