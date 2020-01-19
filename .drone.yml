@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build image
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run
+  environment:
+    SLACK_KEY:
+      from_secret: SLACK_KEY
+  commands:
+  - ./build.sh
