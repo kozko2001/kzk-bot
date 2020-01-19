@@ -8,7 +8,6 @@ WORKDIR /app
 
 COPY . .
 RUN sed -i "s/SLACK_KEY/$SLACK_KEY/g" credentials.yml
-RUN cat credentials.yml
 
 RUN rasa train
 
