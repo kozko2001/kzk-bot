@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 RUN pip install -U pip  ## need pip 19.0.0
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 RUN python -m pytest .
 
