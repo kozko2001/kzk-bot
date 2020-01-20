@@ -3,11 +3,14 @@ ARG SLACK_KEY
 
 EXPOSE 5002
 
-RUN pip install -r requirements.txt
 WORKDIR /app
-
 COPY . .
-RUN pytest .
+
+RUN pip install -U pip  ## need pip 19.0.0
+RUN pip install -r requirements.txt
+
+RUN python -m pytest .
+
 RUN sed -i "s/SLACK_KEY/$SLACK_KEY/g" credentials.yml
 
 RUN rasa train
