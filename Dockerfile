@@ -3,7 +3,7 @@ ARG SLACK_KEY
 
 EXPOSE 5002
 
-RUN pip install rasa
+RUN pip install -r requirements.txt
 WORKDIR /app
 
 COPY . .
