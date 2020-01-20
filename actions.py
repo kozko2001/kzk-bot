@@ -29,7 +29,7 @@ class TodoListAction(Action):
         todos = map(lambda f: list_todos(f), files)
         todos = [y for x in todos for y in x]  ## flatten
 
-        message = "\n".join(todos)
+        message = "\n - ".join(todos)
         dispatcher.utter_message(text="here are your todo list!\n\n" + message)
 
         return []
