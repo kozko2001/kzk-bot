@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from glob import glob
 from orgparse import load  # https://orgparse.readthedocs.io/en/latest/
 
-ORG_FOLDER = "/srv/docker/dropbox/org-mode/"
+ORG_FOLDER = "org/"
 
 class TodoListAction(Action):
 
