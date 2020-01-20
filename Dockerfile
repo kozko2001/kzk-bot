@@ -7,6 +7,7 @@ RUN pip install -r requirements.txt
 WORKDIR /app
 
 COPY . .
+RUN pytest .
 RUN sed -i "s/SLACK_KEY/$SLACK_KEY/g" credentials.yml
 
 RUN rasa train

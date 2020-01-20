@@ -1,0 +1,105 @@
+* Inbox
+** [2020-01-17 vie] testing more
+[[file:~/Dropbox/org-mode/.spacemacs::;; org-mode]]
+** DONE Prepare outcomes victoria meeting
+   CLOSED: [2020-01-13 Mon 11:47]
+
+   [2020-01-10 Fri]
+   [[file:~/org/journal/2020-01-10.org::*Friday, 01/10/20][Friday, 01/10/20]]
+
+** DONE Talk with Radu
+   CLOSED: [2020-01-13 Mon 11:47]
+
+   [2020-01-10 Fri]
+   [[file:~/org/journal/2020-01-10.org::*Friday, 01/10/20][Friday, 01/10/20]]
+
+** DONE Jira leads on the project :followup:
+   CLOSED: [2020-01-13 Mon 11:47]
+
+   [2020-01-10 Fri]
+   [[file:~/org/journal/2020-01-10.org::*Friday, 01/10/20][Friday, 01/10/20]]
+
+** TODO Look at https://github.com/sprig/org-capture-extension/blob/master/README.md :emacs:learn:
+
+   [2020-01-10 Fri]
+   [[file:~/org/notes.org::*Jira leads on the project][Jira leads on the project]]
+
+** DONE Schedule with Juri / recurrent
+   CLOSED: [2020-01-10 vie 18:52]
+
+   [2020-01-10 Fri]
+   [[file:~/org/notes.org::*Look at https://github.com/sprig/org-capture-extension/blob/master/README.md][Look at https://github.com/sprig/org-capture-extension/blob/master/README.md]]
+
+** DONE Talk with Victoria -> Refile of backlog // Also about Christian meetings
+
+   Response:
+   - Start thining of the MLC 360 topic
+   - Improve observability => other team members can search
+   CLOSED: [2020-01-10 vie 19:02]
+   [2020-01-10 Fri]
+   [[file:~/org/notes.org::*Schedule with Juri / recurrent][Schedule with Juri / recurrent]]
+
+** TODO Schedule better Retro/Daily/ etc...
+
+   [2020-01-10 Fri]
+   [[file:~/tw/ded/listing-composer/.git][file:~/tw/ded/listing-composer/.git]]
+
+** DONE Follow up with britta on QA :Delegated:Monica:
+
+   [2020-01-10 vie]
+   [[file:~/org/org-tutorial.org::*Crypt][Crypt]]
+
+** TODO Schedule recurring meeting with Christian + Victoria + TL + BA
+
+   [2020-01-10 vie]
+   [[file:~/org/notes.org::*Talk with Victoria -> Refile of backlog // Also about Christian meetings][Talk with Victoria -> Refile of backlog // Also about Christian meetings]]
+
+** DONE Ask foundation to remove Car360 Images
+   CLOSED: [2020-01-13 Mon 11:47]
+
+   [2020-01-13 Mon]
+
+** TODO MIRO logging get for all the team :Delegated:Diego:
+
+   [2020-01-13 Mon]
+
+** TODO Follow Andres talk with Blanca, grads expectation
+
+   [2020-01-13 Mon]
+
+** TODO Prepare MLC HEalth meeting with Radu
+
+   [2020-01-13 Mon]
+   [[file:~/org/notes.org::*MIRO logging get for all the team][MIRO logging get for all the team]]
+
+** DONE follow up, on moving documentation
+   CLOSED: [2020-01-14 Tue 12:18]
+
+   [2020-01-13 Mon]
+   [[file:~/org/notes.org::*MIRO logging get for all the team][MIRO logging get for all the team]]
+
+** TODO Follow up Thrusday about Sessions When all in BCN
+
+   [2020-01-13 Mon]
+   [[file:~/org/notes.org::*MIRO logging get for all the team][MIRO logging get for all the team]]
+
+** DONE Monica Excel Sprinnt Review complete
+
+   [2020-01-13 Mon]
+   [[file:~/org/notes.org::*MIRO logging get for all the team][MIRO logging get for all the team]]
+
+** DONE Remove car360 widget in MLC, Allow to delete 360 from MLC
+   CLOSED: [2020-01-14 Tue 17:11]
+
+   [2020-01-14 Tue]
+   [[file:~/org/notes.org::*Jira leads on the project][Jira leads on the project]]
+
+** DONE Schedule Refinment adhoc
+   CLOSED: [2020-01-14 Tue 11:09]
+
+   [2020-01-14 Tue]
+   [[file:~/org/notes.org::*Jira leads on the project][Jira leads on the project]]
+** TODO JURI Slo message
+   [2020-01-16 jue]
+** TODO JURI maintenance baseline
+   [2020-01-16 jue]
