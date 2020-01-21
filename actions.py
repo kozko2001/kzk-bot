@@ -7,7 +7,7 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-from typing import Any, Text, Dict, List
+from typing import Any, Text, Dict, List, Union
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -34,6 +34,26 @@ class TodoListAction(Action):
 
         return []
 
+
+class AddTodo(Action):
+    def name(self) -> Text:
+        return "action_add_todo"
+
+    @staticmethod
+    def required_slots(tracker) -> List[Text]:
+        return ["todo"]
+
+#    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+#        return {"todo": self.from_text()}
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        todo = tracker.get_slot("todo")
+        dispatcher.utter_message(text="placeholder add todo " + todo)
+
+        return []
 
 def list_todos(file) -> List[Text]:
     org = load(file)

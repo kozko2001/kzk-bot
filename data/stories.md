@@ -33,3 +33,11 @@
 ## happy list todos
 * list_todos
   - action_todo_list
+  
+## interactive_story_1
+* add_todo{"todo": "Talk with Denisse"}
+    - slot{"todo": "Talk with Denisse"}
+    - action_add_todo
+* add_todo{"todo": "look at this awesome web page"}
+    - slot{"todo": "look at this awesome web page"}
+    - action_add_todo

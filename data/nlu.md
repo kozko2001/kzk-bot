@@ -55,10 +55,14 @@
 - am I talking to a bot?
 - am I talking to a human?
 
-
 ## intent:list_todos
 - what I have pending to do?
 - what I should focus today?
 - can you give my list of todos?
 - what is pending from my org files?
 
+## intent:add_todo
+- add a new todo in the list [Talk with Denisse](todo)
+- add a new todo item to the list: [look at this awesome web page](todo)
+- add a new todo [Talk with Victoria about e-mail](todo)
+- remember to [Send this e-mail to all the team](todo)
