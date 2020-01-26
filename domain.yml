@@ -1,3 +1,4 @@
+
 actions:
 - action_add_todo
 - action_todo_list
@@ -7,10 +8,15 @@ actions:
 - utter_greet
 - utter_happy
 - utter_iamabot
+- utter_which_task
+- utter_log_task
+- action_add_text_to_task
+
 entities:
 - todo
 intents:
-- add_todo
+- request_add_task
+- inform_task
 - greet
 - goodbye
 - affirm
@@ -19,12 +25,15 @@ intents:
 - mood_unhappy
 - bot_challenge
 - list_todos
+
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
+
 slots:
   todo:
     type: text
+
 templates:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
@@ -39,3 +48,7 @@ templates:
   - text: Great, carry on!
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_which_task:
+  - text: What task you want to add to your agenda?
+  utter_log_task:
+  - text: "placeholder adding task with parameters todo: {todo}"

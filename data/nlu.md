@@ -61,8 +61,12 @@
 - can you give my list of todos?
 - what is pending from my org files?
 
-## intent:add_todo
-- add a new todo in the list [Talk with Denisse](todo)
-- add a new todo item to the list: [look at this awesome web page](todo)
-- add a new todo [Talk with Victoria about e-mail](todo)
-- remember to [Send this e-mail to all the team](todo)
+## intent:request_add_task
+- add a new todo
+- add a new task
+- remember this
+
+## intent:inform_task
+- [Talk with Denise](todo)
+- [Send an e-mail to Juri](todo)
+- [Scheduler a meeting with the team](todo)

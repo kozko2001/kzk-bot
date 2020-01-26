@@ -11,6 +11,9 @@ from typing import Any, Text, Dict, List, Union
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
+
+
 from glob import glob
 from orgparse import load  # https://orgparse.readthedocs.io/en/latest/
 
@@ -30,33 +33,32 @@ class TodoListAction(Action):
         todos = [y for x in todos for y in x]  ## flatten
 
         message = "\n - ".join(todos)
-        dispatcher.utter_message(text="here are your todo list!\n\n" + message)
+        dispatcher.utter_message(text=f"here are your todo list!\n\n {message}")
 
         return []
 
 
-class AddTodo(Action):
-    def name(self) -> Text:
-        return "action_add_todo"
-
-    @staticmethod
-    def required_slots(tracker) -> List[Text]:
-        return ["todo"]
-
-#    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-#        return {"todo": self.from_text()}
+class AddTextToTask(Action):
+    def name(self):
+        return "action_add_text_to_task"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        task = tracker.latest_message['text']
 
-        todo = tracker.get_slot("todo")
-        dispatcher.utter_message(text="placeholder add todo " + todo)
+        add_todo(task)
+        dispatcher.utter_message(text=f"added {task} to gtd.org")
+        return [SlotSet("todo", task)]
 
-        return []
 
 def list_todos(file) -> List[Text]:
     org = load(file)
     todos = filter(lambda node: node.todo == "TODO", org[1:])
     headlines = map(lambda node: node.heading, todos)
     return list(headlines)
+
+
+def add_todo(task):
+    with open(ORG_FOLDER + "gtd.org", "a+") as f:
+        f.write(f"** TODO {task} n")

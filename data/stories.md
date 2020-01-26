@@ -34,10 +34,14 @@
 * list_todos
   - action_todo_list
   
-## interactive_story_1
-* add_todo{"todo": "Talk with Denisse"}
-    - slot{"todo": "Talk with Denisse"}
-    - action_add_todo
-* add_todo{"todo": "look at this awesome web page"}
-    - slot{"todo": "look at this awesome web page"}
-    - action_add_todo
+## happy add todos
+* request_add_task
+  - utter_which_task
+* inform_task{"todo": "send an e-mail"}
+  - action_add_text_to_task
+  
+## happy add todos2
+* request_add_task
+  - utter_which_task
+* inform_task{"todo": "Schedule a meeting"}
+  - action_add_text_to_task
